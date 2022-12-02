@@ -107,6 +107,7 @@ var handleLock sync.Mutex
 var handleVals = make(map[unsafe.Pointer]handleVal)
 
 func newHandle(db *SQLiteConn, v interface{}) unsafe.Pointer {
+	print("xxxx") 
 	handleLock.Lock()
 	defer handleLock.Unlock()
 	val := handleVal{db: db, val: v}
