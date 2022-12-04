@@ -246,6 +246,7 @@ func init() {
 
 // Version returns SQLite library version information.
 func Version() (libVersion string, libVersionNumber int, sourceID string) {
+	print("xxxx")
 	libVersion = C.GoString(C.sqlite3_libversion())
 	libVersionNumber = int(C.sqlite3_libversion_number())
 	sourceID = C.GoString(C.sqlite3_sourceid())
