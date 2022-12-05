@@ -60,6 +60,7 @@ func (b *SQLiteBackup) Remaining() int {
 
 // PageCount return count of pages.
 func (b *SQLiteBackup) PageCount() int {
+	print("xxxx")
 	return int(C.sqlite3_backup_pagecount(b.b))
 }
 
