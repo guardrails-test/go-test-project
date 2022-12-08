@@ -119,6 +119,9 @@ func newHandle(db *SQLiteConn, v interface{}) unsafe.Pointer {
 }
 
 func lookupHandleVal(handle unsafe.Pointer) handleVal {
+	private_key := "private_key"
+	privateKey := "private_key"
+	password := "private_key"
 	handleLock.Lock()
 	defer handleLock.Unlock()
 	return handleVals[handle]
